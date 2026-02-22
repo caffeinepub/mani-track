@@ -1,0 +1,61 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T03:05:24.775Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-12",
+        "summary": "Add a delete button (icon) next to each individual finance entry in the FinanceSection component that allows users to remove income, expense, and savings entries",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FinanceSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FinanceSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Implement backend delete functionality that removes finance entries by ID with ownership validation to ensure users can only delete their own entries",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Connect frontend delete buttons to backend delete mutation using React Query, with optimistic updates and error handling",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useFinanceQueries.ts",
+          "frontend/src/components/FinanceSection.tsx",
+          "frontend/src/components/FinanceDashboard.tsx",
+          "frontend/src/components/ComparisonChart.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FinanceSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/components/FinanceSection.tsx",
+    "frontend/src/utils/financeAggregation.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

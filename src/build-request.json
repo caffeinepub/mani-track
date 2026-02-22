@@ -1,0 +1,77 @@
+{
+  "kind": "build_request",
+  "title": "Add delete functionality for finance entries",
+  "projectName": "Mani Track",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Add a delete button (icon) next to each individual finance entry in the FinanceSection component that allows users to remove income, expense, and savings entries",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-request",
+          "msg-user-single-entry-delete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A delete icon/button appears next to each finance entry in all three sections (income, expenses, savings)",
+        "Clicking the delete button removes the specific entry from the dashboard",
+        "The delete action is visually confirmed (entry disappears from the list)",
+        "Delete buttons are styled consistently with the financial theme"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Implement backend delete functionality that removes finance entries by ID with ownership validation to ensure users can only delete their own entries",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-request",
+          "msg-user-single-entry-delete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend deleteFinanceEntry function accepts entry ID and validates ownership",
+        "Delete operation removes the entry from the user's finance data",
+        "Only the entry owner can delete their own entries",
+        "Delete operation returns success/failure status"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Connect frontend delete buttons to backend delete mutation using React Query, with optimistic updates and error handling",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-request",
+          "msg-user-single-entry-delete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Delete mutation hook is implemented in useFinanceQueries.ts",
+        "Clicking delete triggers the backend delete function",
+        "Dashboard updates immediately after successful deletion",
+        "Comparison chart reflects the updated data after deletion",
+        "Error messages display if deletion fails"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain single-actor architecture in backend/main.mo",
+    "Do not modify immutable frontend paths (useInternetIdentity, useActor, main.tsx, components/ui)",
+    "Preserve existing finance entry CRUD operations",
+    "Ensure delete functionality respects user ownership and access control"
+  ],
+  "nonGoals": [
+    "Bulk delete functionality for multiple entries",
+    "Undo/restore deleted entries",
+    "Delete confirmation dialogs",
+    "Indian Rupees currency integration (deferred)",
+    "Month-over-month comparison charts (deferred)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

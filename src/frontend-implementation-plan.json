@@ -1,0 +1,57 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add delete functionality for finance entries",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Add delete button next to each finance entry in FinanceSection component",
+      "acceptanceCriteria": [
+        "A delete icon/button appears next to each finance entry in all three sections (income, expenses, savings)",
+        "Clicking the delete button removes the specific entry from the dashboard",
+        "The delete action is visually confirmed (entry disappears from the list)",
+        "Delete buttons are styled consistently with the financial theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinanceSection.tsx",
+          "operation": "modify",
+          "description": "Add a delete icon button next to each finance entry item in the aggregated list. Import Trash2 icon from lucide-react. Position the delete button on the right side of each entry row. Add onClick handler that calls the delete mutation with the entry ID. Style the button using the finance theme colors (text-muted-foreground hover state with appropriate color based on entry type). Ensure the button is accessible and has proper hover states."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Connect frontend delete buttons to backend delete mutation with React Query",
+      "acceptanceCriteria": [
+        "Delete mutation hook is implemented in useFinanceQueries.ts",
+        "Clicking delete triggers the backend delete function",
+        "Dashboard updates immediately after successful deletion",
+        "Comparison chart reflects the updated data after deletion",
+        "Error messages display if deletion fails"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useFinanceQueries.ts",
+          "operation": "modify",
+          "description": "Add useDeleteFinanceEntry mutation hook that calls actor.deleteFinanceEntry(id). Configure the mutation with onSuccess to invalidate the financeEntries query key to refresh all finance data. Include error handling with proper error state and messages. Use optimistic updates to immediately remove the entry from the cached data before the backend confirms deletion. Follow the existing pattern used in other mutation hooks (useAddFinanceEntry, useUpdateFinanceEntry) for consistency."
+        },
+        {
+          "path": "frontend/src/components/FinanceSection.tsx",
+          "operation": "modify",
+          "description": "Import and use the useDeleteFinanceEntry mutation hook. In the delete button onClick handler, call the mutation with the entry ID. Add loading state to disable the delete button during the mutation. Display toast or inline error messages if the deletion fails. Ensure the optimistic update provides immediate visual feedback by removing the entry from the displayed list."
+        },
+        {
+          "path": "frontend/src/components/FinanceDashboard.tsx",
+          "operation": "modify",
+          "description": "Verify that the dashboard automatically reflects deleted entries through the existing query invalidation mechanism. No structural changes needed, but ensure the component properly re-renders when the financeEntries query is invalidated after a successful deletion."
+        },
+        {
+          "path": "frontend/src/components/ComparisonChart.tsx",
+          "operation": "modify",
+          "description": "Verify that the comparison chart automatically reflects deleted entries through the existing query invalidation mechanism and chartDataFormatter. No structural changes needed, but ensure the chart re-renders with updated aggregated data when entries are deleted."
+        }
+      ]
+    }
+  ]
+}

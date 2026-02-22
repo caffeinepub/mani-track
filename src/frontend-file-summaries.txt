@@ -1,0 +1,18 @@
+{
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all vessels and adding/updating vessel tracking data with automatic cache invalidation.",
+  "frontend/src/components/VesselList.tsx": "Displays all tracked vessels in a responsive grid with vessel details including position, speed, heading, and timestamp, with loading and empty states.",
+  "frontend/src/components/VesselForm.tsx": "Form component for adding/updating vessel tracking data with validation for coordinates, speed, and heading fields.",
+  "frontend/src/App.tsx": "Main application component with finance tracker header, authentication integration, conditional profile setup modal rendering, finance entry form, comparison chart, and dashboard with time period selection, includes Toaster component for notifications.",
+  "frontend/src/index.css": "Global styles with finance-themed OKLCH color system featuring green for income, red for expenses, and blue for savings in both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with finance color system (income, expense, saving) and professional shadows for financial data display.",
+  "frontend/src/components/LoginButton.tsx": "Login/logout button component using Internet Identity authentication with loading states and query cache clearing on logout.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time user profile setup that appears when authenticated user has no profile, with name input and save functionality.",
+  "frontend/src/components/FinanceEntryForm.tsx": "Form component for adding/editing finance entries with amount, date picker, category, type selector (Income/Expense/Saving), description, and validation.",
+  "frontend/src/components/FinanceDashboard.tsx": "Dashboard displaying total income, expenses, and savings with three sections showing aggregated data by selected time period (daily/monthly/yearly).",
+  "frontend/src/components/FinanceSection.tsx": "Reusable section component for displaying filtered and aggregated finance entries with color-coded styling based on entry type, now includes delete buttons with trash icons that appear on hover for each individual entry.",
+  "frontend/src/components/ComparisonChart.tsx": "Bar chart component visualizing income, expenses, and savings comparison over time using Recharts with responsive design and time period toggle.",
+  "frontend/src/hooks/useFinanceQueries.ts": "React Query hooks for all finance operations including user profile management, fetching entries, adding/updating entries, and filtering by date range or type.",
+  "frontend/src/utils/financeAggregation.ts": "Utility functions for aggregating finance entries by day, month, or year with total calculations and entry grouping, now includes entry IDs in aggregated data for delete functionality.",
+  "frontend/src/utils/chartDataFormatter.ts": "Utility functions to transform finance entries into chart-compatible format with income, expense, and saving data series for different time periods, with proper scoping of format string variable.",
+  "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge."
+}

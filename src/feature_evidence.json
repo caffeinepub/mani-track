@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-delete-button-icon-next-to-each-individual-finance-entry-in-the-financesection-component-that-allows-users-to-remove-income-expense-and-savings-entries",
+      "featureTitle": "Add a delete button (icon) next to each individual finance entry in the FinanceSection component that allows users to remove income, expense, and savings entries",
+      "files": [
+        "frontend/src/components/FinanceSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-connect-frontend-delete-buttons-to-backend-delete-mutation-using-react-query-with-optimistic-updates-and-error-handling",
+      "featureTitle": "Connect frontend delete buttons to backend delete mutation using React Query, with optimistic updates and error handling",
+      "files": [
+        "frontend/src/components/FinanceSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

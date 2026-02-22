@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Finance color palette - Light mode */
+        --background: 0.98 0.005 220;
+        --foreground: 0.15 0.02 230;
+        --card: 1 0 0;
+        --card-foreground: 0.15 0.02 230;
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0.02 230;
+        
+        /* Primary - Professional Blue */
+        --primary: 0.45 0.15 250;
+        --primary-foreground: 0.98 0.005 220;
+        
+        /* Secondary - Muted Blue */
+        --secondary: 0.65 0.10 240;
+        --secondary-foreground: 0.98 0.005 220;
+        
+        /* Muted tones */
+        --muted: 0.94 0.01 220;
+        --muted-foreground: 0.50 0.03 230;
+        
+        /* Accent - Neutral */
+        --accent: 0.70 0.05 220;
+        --accent-foreground: 0.15 0.02 230;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.005 220;
+        
+        /* Borders */
+        --border: 0.88 0.01 220;
+        --input: 0.88 0.01 220;
+        --ring: 0.45 0.15 250;
+        
+        /* Finance-specific colors */
+        --income: 0.55 0.18 145;
+        --income-foreground: 0.98 0.005 145;
+        
+        --expense: 0.55 0.20 15;
+        --expense-foreground: 0.98 0.005 15;
+        
+        --saving: 0.50 0.16 220;
+        --saving-foreground: 0.98 0.005 220;
+        
+        /* Chart colors */
+        --chart-1: 0.55 0.18 145;
+        --chart-2: 0.55 0.20 15;
+        --chart-3: 0.50 0.16 220;
+        --chart-4: 0.60 0.13 190;
+        --chart-5: 0.35 0.08 230;
+    }
+
+    .dark {
+        --background: 0.12 0.02 230;
+        --foreground: 0.95 0.005 220;
+        --card: 0.16 0.02 230;
+        --card-foreground: 0.95 0.005 220;
+        --popover: 0.14 0.02 230;
+        --popover-foreground: 0.95 0.005 220;
+        
+        /* Primary - Lighter for dark mode */
+        --primary: 0.60 0.18 250;
+        --primary-foreground: 0.12 0.02 230;
+        
+        /* Secondary - Bright Blue */
+        --secondary: 0.70 0.12 240;
+        --secondary-foreground: 0.12 0.02 230;
+        
+        --muted: 0.20 0.02 230;
+        --muted-foreground: 0.65 0.03 220;
+        
+        /* Accent */
+        --accent: 0.75 0.06 220;
+        --accent-foreground: 0.12 0.02 230;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.005 220;
+        
+        --border: 0.25 0.02 230;
+        --input: 0.25 0.02 230;
+        --ring: 0.60 0.18 250;
+        
+        /* Finance-specific colors for dark */
+        --income: 0.65 0.20 145;
+        --income-foreground: 0.12 0.02 145;
+        
+        --expense: 0.65 0.22 15;
+        --expense-foreground: 0.12 0.02 15;
+        
+        --saving: 0.60 0.18 220;
+        --saving-foreground: 0.12 0.02 220;
+        
+        /* Chart colors for dark */
+        --chart-1: 0.65 0.20 145;
+        --chart-2: 0.65 0.22 15;
+        --chart-3: 0.60 0.18 220;
+        --chart-4: 0.65 0.15 185;
+        --chart-5: 0.40 0.10 225;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .shadow-finance {
+        box-shadow: 0 4px 6px -1px oklch(var(--primary) / 0.1),
+                    0 2px 4px -1px oklch(var(--primary) / 0.06);
+    }
+    
+    .shadow-finance-lg {
+        box-shadow: 0 10px 15px -3px oklch(var(--primary) / 0.1),
+                    0 4px 6px -2px oklch(var(--primary) / 0.05);
+    }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Personal finance tracking application for income, expenses, and savings with daily, monthly, and yearly views and comparison charts",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-dashboard-displaying-a-list-of-tracked-vessels-with-their-current-status-including-name-position-coordinates-speed-and-last-update-time",
+      "title": "Create a frontend dashboard displaying a list of tracked vessels with their current status including name, position coordinates, speed, and last update time",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-form-to-input-new-vessel-tracking-data-including-vessel-name-latitude-longitude-speed-and-heading",
+      "title": "Add a form to input new vessel tracking data including vessel name, latitude, longitude, speed, and heading",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-maritime-themed-visual-style-with-oceanic-colors-teals-navy-blues-seafoam-greens-clean-typography-suitable-for-data-display-and-nautical-inspired-ui-elements-that-create-a-professional-vessel-tracking-interface",
+      "title": "Design a cohesive maritime-themed visual style with oceanic colors (teals, navy blues, seafoam greens), clean typography suitable for data display, and nautical-inspired UI elements that create a professional vessel tracking interface",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-vessel-form-with-finance-entry-form-supporting-input-of-amount-date-category-and-type-selection-income-expense-saving",
+      "title": "Replace vessel form with finance entry form supporting input of amount, date, category, and type selection (income/expense/saving)",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-vessel-list-with-finance-dashboard-displaying-three-separate-sections-for-income-expenses-and-savings-entries-with-daily-monthly-and-yearly-view-toggles",
+      "title": "Replace vessel list with finance dashboard displaying three separate sections for income, expenses, and savings entries with daily, monthly, and yearly view toggles",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-comparison-chart-component-visualizing-income-expenses-and-savings-over-selected-time-period-with-line-or-bar-chart",
+      "title": "Implement comparison chart component visualizing income, expenses, and savings over selected time period with line or bar chart",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-maritime-theme-with-financial-professional-theme-using-green-for-income-red-for-expenses-blue-for-savings-with-clean-typography-and-data-focused-design",
+      "title": "Replace maritime theme with financial/professional theme using green for income, red for expenses, blue for savings, with clean typography and data-focused design",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-delete-button-icon-next-to-each-individual-finance-entry-in-the-financesection-component-that-allows-users-to-remove-income-expense-and-savings-entries",
+      "title": "Add a delete button (icon) next to each individual finance entry in the FinanceSection component that allows users to remove income, expense, and savings entries",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-frontend-delete-buttons-to-backend-delete-mutation-using-react-query-with-optimistic-updates-and-error-handling",
+      "title": "Connect frontend delete buttons to backend delete mutation using React Query, with optimistic updates and error handling",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-3",
+      "summary": "Create data model to store income/salary entries with amount, date, and category",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create data model to store expense entries with amount, date, and category",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create data model to store savings entries with amount, date, and target/goal",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement forms to input income, expenses, and savings data",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Display income, expenses, and savings in daily, monthly, and yearly views",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Create comparison charts to visualize income vs expenses vs savings over time periods",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Replace vessel tracking data models with finance tracking models: create FinanceEntry type with fields for amount (Float), date (Int timestamp), category (Text), and entry type (income/expense/saving)",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Implement backend functions to add, update, retrieve, and delete finance entries with filtering by date range and entry type",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add delete functionality to remove individual income, expense, and savings entries from the dashboard",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Implement backend delete functionality that removes finance entries by ID with ownership validation to ensure users can only delete their own entries",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Mani Track",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
